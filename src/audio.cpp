@@ -1,5 +1,9 @@
-#include "heads.h"
+
+#include <Arduino.h>
+#include <driver/i2s.h>
+#include <base64.hpp>
 #include "audio.h"
+
 
 void initAudio()
 {    

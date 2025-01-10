@@ -2,10 +2,6 @@
 #ifndef AUDIO_H
 #define AUDIO_H
 
-#include <Arduino.h>
-#include <driver/i2s.h>
-
-
 // I2S配置 - MAX98357A
 #define I2S_OUT_PORT I2S_NUM_1
 #define I2S_OUT_BCLK 15
@@ -24,11 +20,15 @@
 #define RECORD_TIME_SECONDS 15
 #define BUFFER_SIZE (SAMPLE_RATE_RECORD * RECORD_TIME_SECONDS)
 
-
 void initRecord(void);
 void initAudio(void);
 void playAudio(uint8_t* audioData, size_t audioDataSize);
 void playAudio_Zai(void);
 void clearAudio(void);
+
+// 函数声明
+static bool microphone_inference_start(uint32_t n_samples);
+static bool microphone_inference_record(void);
+static int microphone_audio_signal_get_data(size_t offset, size_t length, float* out_ptr);
 
 #endif

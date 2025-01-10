@@ -1,6 +1,4 @@
 #include "heads.h"
-#include "audio.h"
-
 
 
 // 音频缓冲区结构体

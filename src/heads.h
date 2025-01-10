@@ -7,13 +7,10 @@
 #include <ArduinoJson.h>
 #include <UrlEncode.h>
 #include <base64.hpp>
+#include <driver/i2s.h>
+#include "audio.h"
 
 
-
-// 函数声明
-static bool microphone_inference_start(uint32_t n_samples);
-static bool microphone_inference_record(void);
-static int microphone_audio_signal_get_data(size_t offset, size_t length, float* out_ptr);
 
 void mainChat(void* arg);
 String getAccessToken(const char* api_key, const char* secret_key);
