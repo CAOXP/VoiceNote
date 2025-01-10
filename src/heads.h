@@ -1,3 +1,6 @@
+#ifndef HEADS_H
+#define HEADS_H
+
 #include <wakeup_detect_houguoxiong_inferencing.h>
 #include <WiFi.h>
 #include <HTTPClient.h>
@@ -18,3 +21,4 @@ String baiduSTT_Send(String access_token, uint8_t* audioData, int audioDataSize)
 String baiduErnieBot_Get(String access_token, String prompt);
 void baiduTTS_Send(String access_token, String text);
 
+#endif
