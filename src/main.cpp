@@ -118,6 +118,18 @@ void smtpSetup();
 void postTTS(String texttts);
 String xunufeiUrl(String hostPart, String requestLine, String url);
 String getGPTAnswer(String inputText);
+void clean_ps();
+void WIFI_connect();
+void ntpconnect();
+void showTime();
+void webpage_set();
+void readEE();
+void postSTT();
+void postSpark(String inputText);
+void postTTS(String inputText);
+String EEPROMread(int EEposition);
+void EEPROMwrite(String EEname, int EEpoistion);
+
 
 void setup() {
   // put your setup code here, to run once:
