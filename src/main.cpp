@@ -283,6 +283,8 @@ void loop()
   { // 监听讯飞语音合成服务器
     TTSclient.poll();
   }
+
+  
   if (downbutton.onPressed())
   { // 如果向下拨键
     position++;
